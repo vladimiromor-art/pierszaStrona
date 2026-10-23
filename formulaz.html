@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Ankieta Dla Uczniów - Hobby & Szkoła</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            max-width: 600px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="password"], select, textarea {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .options-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .options-group label {
+            font-weight: normal;
+        }
+        .buttons-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button, input[type="submit"], input[type="reset"] {
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body bgcolor="#E0FFFF">
+
+    <h1>Ankieta Dla Uczniów - Hobby & Szkoła</h1>
+
+    <form action="#" method="post">
+
+        <!-- 1. Podaj imię -->
+        <div class="form-group">
+            <label for="imie">1. Podaj imię:</label>
+            <input type="text" id="imie" name="imie">
+        </div>
+
+        <!-- 2. (login) -->
+        <div class="form-group">
+            <label for="login">2. (login):</label>
+            <input type="text" id="login" name="login" value="Uczeń 322">
+        </div>
+
+        <!-- 3. Pole do wpisywania hasła (Password) -->
+        <div class="form-group">
+            <label for="haslo">3. Pole do wpisywania hasła (Password):</label>
+            <input type="password" id="haslo" name="haslo">
+        </div>
+
+        <!-- 4. Pole jednokrotnego wyboru (Radio buttons - Płeć) -->
+        <div class="form-group">
+            <label>4. Pole jednokrotnego wyboru (Radio buttons - Płeć):</label>
+            <div class="options-group">
+                <label><input type="radio" name="plec" value="Mężczyzna" checked> Mężczyzna</label>
+                <label><input type="radio" name="plec" value="Kobieta"> Kobieta</label>
+                <label><input type="radio" name="plec" value="Nie chcę podawać"> Nie chcę podawać</label>
+            </div>
+        </div>
+
+        <!-- 5. Pole wielokrotnego wyboru (Check box - Ulubione przedmioty) -->
+        <div class="form-group">
+            <label>5. Pole wielokrotnego wyboru (Check box - Ulubione przedmioty):</label>
+            <div class="options-group">
+                <label><input type="checkbox" name="przedmioty" value="Matematyka"> Matematyka</label>
+                <label><input type="checkbox" name="przedmioty" value="Biologia"> Biologia</label>
+                <label><input type="checkbox" name="przedmioty" value="WF"> WF</label>
+                <label><input type="checkbox" name="przedmioty" value="Chemia"> Chemia</label>
+                <label><input type="checkbox" name="przedmioty" value="Fizyka"> Fizyka</label>
+                <label><input type="checkbox" name="przedmioty" value="Historia"> Historia</label>
+            </div>
+        </div>
+
+        <!-- 6. Wybierz klasę -->
+        <div class="form-group">
+            <label for="klasa">6. Wybierz klasę:</label>
+            <select id="klasa" name="klasa">
+                <option value="1P" selected>Klasa 1P</option>
+                <option value="2P">Klasa 2P</option>
+                <option value="3P">Klasa 3P</option>
+            </select>
+        </div>
+
+        <!-- 7. Wielowierszowe pole tekstowe (Uwagi o szkole) -->
+        <div class="form-group">
+            <label for="uwagi">7. Wielowierszowe pole tekstowe (Uwagi o szkole):</label>
+            <textarea id="uwagi" name="uwagi" rows="4" placeholder="..."></textarea>
+        </div>
+
+        <!-- 8. Przyciski formularza (Submit, Reset, Button) -->
+        <div class="form-group">
+            <label>8. Przyciski Formularza (Submit, Reset, Button):</label>
+            <div class="buttons-group">
+                <input type="reset" value="Anuluj">
+                <input type="submit" value="Wyślij Formularz">
+                <button type="button">Wyślij Dane</button>
+            </div>
+        </div>
+
+    </form>
+<a href="index.html">wróć</a>
+</body>
+</html>
