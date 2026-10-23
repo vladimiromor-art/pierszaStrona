@@ -1,120 +1,166 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl-PL">
 <head>
-    <meta charset="UTF-8">
-    <title>Ankieta Dla Uczniów - Hobby & Szkoła</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            max-width: 600px;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-        input[type="text"], input[type="password"], select, textarea {
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-        .options-group {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-        .options-group label {
-            font-weight: normal;
-        }
-        .buttons-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-        button, input[type="submit"], input[type="reset"] {
-            padding: 10px 15px;
-            cursor: pointer;
-        }
-    </style>
+	<meta charset="utf-8">
+	<title>ZADANIE FORMULARZ - Jan Kowalski 2Fg1</title>
 </head>
-<body bgcolor="#E0FFFF">
+<body bgcolor="#87CEFA">
 
-    <h1>Ankieta Dla Uczniów - Hobby & Szkoła</h1>
+	<center>
+		<h1>Formularz obsługi zgłoszeń serwisowych</h1>
+	</center>
 
-    <form action="#" method="post">
+	<form enctype="text/plain" action="mailto:mkryniew@ids.gda.pl?subject=Kowalski" method="Post">
+		<table border="0" align="center" width="950" cellspacing="5" cellpadding="5">
+			
+			<!-- WIERSZ 1: Dane osobowe, Środek transportu, Ulubione ciastko -->
+			<tr height="150" valign="top">
+				
+				<!-- Pola tekstowe INPUT (5 rodzajów) -->
+				<td width="320">
+					<b>1. Dane zgłaszającego:</b><br><br>
+					
+					Imię:<br>
+					<input type="text" name="imie" size="25"><br><br>
+					
+					Drugie imię (z tekstem początkowym):<br>
+					<input type="text" name="drugie_imie" value="Brak" size="25"><br><br>
+					
+					Nazwisko:<br>
+					<input type="text" name="nazwisko" size="25"><br><br>
+					
+					Kod dostępu (max 6 znaków):<br>
+					<input type="text" name="kod" maxlength="6" size="10"><br><br>
+					
+					Hasło do konta:<br>
+					<input type="password" name="haslo" size="25">
+				</td>
 
-        <!-- 1. Podaj imię -->
-        <div class="form-group">
-            <label for="imie">1. Podaj imię:</label>
-            <input type="text" id="imie" name="imie">
-        </div>
+				<!-- Listy rozwijalne SELECT (3 sztuki) -->
+				<td width="300" align="center">
+					<font color="red"><b>2. Preferowany kontakt i klasa</b></font><br><br>
+					
+					Wybierz klasę (5 opcji, domyślna):<br>
+					<select name="klasa">
+						<option value="1a">Klasa 1A</option>
+						<option value="2f" selected>Klasa 2F</option>
+						<option value="3a">Klasa 3A</option>
+						<option value="4a">Klasa 4A</option>
+						<option value="5a">Klasa 5A</option>
+					</select>
+					<br><br>
 
-        <!-- 2. (login) -->
-        <div class="form-group">
-            <label for="login">2. (login):</label>
-            <input type="text" id="login" name="login" value="Uczeń 322">
-        </div>
+					Sposób dojazdu (4 opcje, bez domyślnej):<br>
+					<select name="dojazd">
+						<option value="autobus">Autobus</option>
+						<option value="pociag">Pociąg</option>
+						<option value="rower">Rower</option>
+						<option value="pieszo">Pieszo</option>
+					</select>
+					<br><br>
 
-        <!-- 3. Pole do wpisywania hasła (Password) -->
-        <div class="form-group">
-            <label for="haslo">3. Pole do wpisywania hasła (Password):</label>
-            <input type="password" id="haslo" name="haslo">
-        </div>
+					Priorytet zgłoszenia (3 opcje, domyślna):<br>
+					<select name="priorytet">
+						<option value="niski">Niski</option>
+						<option value="sredni" selected>Średni</option>
+						<option value="wysoki">Wysoki</option>
+					</select>
+				</td>
 
-        <!-- 4. Pole jednokrotnego wyboru (Radio buttons - Płeć) -->
-        <div class="form-group">
-            <label>4. Pole jednokrotnego wyboru (Radio buttons - Płeć):</label>
-            <div class="options-group">
-                <label><input type="radio" name="plec" value="Mężczyzna" checked> Mężczyzna</label>
-                <label><input type="radio" name="plec" value="Kobieta"> Kobieta</label>
-                <label><input type="radio" name="plec" value="Nie chcę podawać"> Nie chcę podawać</label>
-            </div>
-        </div>
+				<!-- Sekcja Checkbox (pięć w poziomie, domyślna) -->
+				<td width="330">
+					<b>3. Wyposażenie stanowiska (checkbox - 5 opcji poziomo):</b><br><br>
+					<input type="checkbox" name="sprzet1" value="monitor" checked> Monitor &nbsp;
+					<input type="checkbox" name="sprzet2" value="mysz"> Mysz &nbsp;
+					<input type="checkbox" name="sprzet3" value="klawiatura"> Klawiatura &nbsp;
+					<input type="checkbox" name="sprzet4" value="sluchawki"> Słuchawki &nbsp;
+					<input type="checkbox" name="sprzet5" value="kamerka"> Kamerka
+				</td>
 
-        <!-- 5. Pole wielokrotnego wyboru (Check box - Ulubione przedmioty) -->
-        <div class="form-group">
-            <label>5. Pole wielokrotnego wyboru (Check box - Ulubione przedmioty):</label>
-            <div class="options-group">
-                <label><input type="checkbox" name="przedmioty" value="Matematyka"> Matematyka</label>
-                <label><input type="checkbox" name="przedmioty" value="Biologia"> Biologia</label>
-                <label><input type="checkbox" name="przedmioty" value="WF"> WF</label>
-                <label><input type="checkbox" name="przedmioty" value="Chemia"> Chemia</label>
-                <label><input type="checkbox" name="przedmioty" value="Fizyka"> Fizyka</label>
-                <label><input type="checkbox" name="przedmioty" value="Historia"> Historia</label>
-            </div>
-        </div>
+			</tr>
 
-        <!-- 6. Wybierz klasę -->
-        <div class="form-group">
-            <label for="klasa">6. Wybierz klasę:</label>
-            <select id="klasa" name="klasa">
-                <option value="1P" selected>Klasa 1P</option>
-                <option value="2P">Klasa 2P</option>
-                <option value="3P">Klasa 3P</option>
-            </select>
-        </div>
+			<!-- WIERSZ 2: Sekcje Radio oraz Dodatkowe Checkboxy -->
+			<tr height="200" valign="top">
+				
+				<!-- Sekcje Radio (4 poziomo, 3 pionowo, 5 poziomo) -->
+				<td>
+					<b>4. Ocena sprzętu (Radio - 4 opcje poziomo):</b><br>
+					<input type="radio" name="ocena" value="1"> 1 &nbsp;
+					<input type="radio" name="ocena" value="2"> 2 &nbsp;
+					<input type="radio" name="ocena" value="3" checked> 3 &nbsp;
+					<input type="radio" name="ocena" value="4"> 4
+					<br><br>
 
-        <!-- 7. Wielowierszowe pole tekstowe (Uwagi o szkole) -->
-        <div class="form-group">
-            <label for="uwagi">7. Wielowierszowe pole tekstowe (Uwagi o szkole):</label>
-            <textarea id="uwagi" name="uwagi" rows="4" placeholder="..."></textarea>
-        </div>
+					<b>Czy umiesz programować? (Radio - 3 opcje pionowo):</b><br>
+					<input type="radio" name="prog" value="tak"> Tak<br>
+					<input type="radio" name="prog" value="nie"> Nie<br>
+					<input type="radio" name="prog" value="niewiem"> Nie wiem
+					<br><br>
 
-        <!-- 8. Przyciski formularza (Submit, Reset, Button) -->
-        <div class="form-group">
-            <label>8. Przyciski Formularza (Submit, Reset, Button):</label>
-            <div class="buttons-group">
-                <input type="reset" value="Anuluj">
-                <input type="submit" value="Wyślij Formularz">
-                <button type="button">Wyślij Dane</button>
-            </div>
-        </div>
+					<b>Poziom zaawansowania (Radio - 5 opcji poziomo):</b><br>
+					<input type="radio" name="poziom" value="1"> Bardzo niski &nbsp;
+					<input type="radio" name="poziom" value="2"> Niski &nbsp;
+					<input type="radio" name="poziom" value="3"> Średni &nbsp;
+					<input type="radio" name="poziom" value="4"> Wysoki &nbsp;
+					<input type="radio" name="poziom" value="5"> Ekspert
+				</td>
 
-    </form>
+				<!-- Sekcje Checkbox (4 pionowo, 3 pionowo) -->
+				<td>
+					<b>5. Ulubione systemy (Checkbox - 4 pionowo):</b><br>
+					<input type="checkbox" name="sys1" value="win"> Windows<br>
+					<input type="checkbox" name="sys2" value="linux"> Linux<br>
+					<input type="checkbox" name="sys3" value="macos"> macOS<br>
+					<input type="checkbox" name="sys4" value="android"> Android
+					<br><br>
+
+					<b>Dni obecności (Checkbox - 3 pionowo):</b><br>
+					<input type="checkbox" name="dzien1" value="pn"> Poniedziałek<br>
+					<input type="checkbox" name="dzien2" value="sr"> Środa<br>
+					<input type="checkbox" name="dzien3" value="pt"> Piątek
+				</td>
+
+				<!-- Elementy HTML5 (czas, data, kolor, suwak, progress) oraz TEXTAREA -->
+				<td>
+					<b>6. Dodatkowe parametry (HTML5):</b><br>
+					Podaj czas: <input type="time" name="czas"><br>
+					Podaj datę: <input type="date" name="data"><br>
+					Wybierz kolor: <input type="color" name="ulubiony_kolor"><br>
+					Poziom zadowolenia: <input type="range" name="suwak"><br>
+					Status ładowania: <progress value="70" max="100">70%</progress>
+					<br><br>
+
+					<b>Uwagi / Opis problemu (TEXTAREA):</b><br>
+					<textarea name="uwagi" cols="35" rows="4" placeholder="Wpisz tutaj swoje uwagi..."></textarea>
+				</td>
+
+			</tr>
+
+			<!-- WIERSZ 3: Przyciski (BUTTON, RESET, SUBMIT) -->
+			<tr height="100" align="center" valign="middle">
+				
+				<td>
+					<button type="button" onclick="alert('Kliknięto przycisk pomocniczy!')" style="height:50px; width:200px;">
+						Przycisk 1 (Info)
+					</button>
+					<br><br>
+					<button type="button" onclick="alert('Wersja formularza 1.0')" style="height:30px; width:200px;">
+						Przycisk 2 (Wersja)
+					</button>
+				</td>
+
+				<td>
+					<input type="reset" value="CZYŚĆ" style="height:60px; width:180px; font-weight:bold;">
+				</td>
+
+				<td>
+					<input type="submit" value="WYŚLIJ" style="height:60px; width:180px; font-weight:bold;">
+				</td>
+
+			</tr>
+
+		</table>
+	</form>
 <a href="index.html">wróć</a>
 </body>
 </html>
