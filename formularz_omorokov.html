@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Ankieta Dla Uczniów - Hobby & Szkoła</title>
+</head>
+<body>
 
+	<h1>Ankieta Dla Uczniów - Hobby & Szkoła</h1>
+
+	<form enctype="text/plain" action="mailto:mkryniew@wp.pl" method="Post">
+		
+		<!-- 1. Podaj imię -->
+		<p>
+			<b>1. Podaj imię:</b><br>
+			<input type="text" name="imie" size="35">
+		</p>
+
+		<!-- 2. (login) -->
+		<p>
+			<b>2. (login):</b><br>
+			<input type="text" name="login" value="Uczeń 322" size="35">
+		</p>
+
+		<!-- 3. Pole do wpisywania hasła -->
+		<p>
+			<b>3. Pole do wpisywania hasła (Password):</b><br>
+			<input type="password" name="haslo" size="35">
+		</p>
+
+		<!-- 4. Pole jednokrotnego wyboru (Radio buttons - Płeć) -->
+		<p>
+			<b>4. Pole jednokrotnego wyboru (Radio buttons - Płeć):</b><br>
+			<input type="radio" name="plec" value="Mężczyzna" checked> Mężczyzna &nbsp;&nbsp;&nbsp;
+			<input type="radio" name="plec" value="Kobieta"> Kobieta &nbsp;&nbsp;&nbsp;
+			<input type="radio" name="plec" value="Nie chcę podawać"> Nie chcę podawać
+		</p>
+
+		<!-- 5. Pole wielokrotnego wyboru (Check box - Ulubione przedmioty) -->
+		<p>
+			<b>5. Pole wielokrotnego wyboru (Check box - Ulubione przedmioty):</b><br>
+			<input type="checkbox" name="przedmioty" value="Matematyka"> Matematyka &nbsp;
+			<input type="checkbox" name="przedmioty" value="Biologia"> Biologia &nbsp;
+			<input type="checkbox" name="przedmioty" value="WF"> WF &nbsp;
+			<input type="checkbox" name="przedmioty" value="Chemia"> Chemia &nbsp;
+			<input type="checkbox" name="przedmioty" value="Fizyka"> Fizyka &nbsp;
+			<input type="checkbox" name="przedmioty" value="Historia"> Historia
+		</p>
+
+		<!-- 6. Wybierz klasę -->
+		<p>
+			<b>6. Wybierz klasę:</b><br>
+			<select name="klasa">
+				<option value="1P" selected>Klasa 1P</option>
+				<option value="2P">Klasa 2P</option>
+				<option value="3P">Klasa 3P</option>
+			</select>
+		</p>
+
+		<!-- 7. Wielowierszowe pole tekstowe -->
+		<p>
+			<b>7. Wielowierszowe pole tekstowe (Uwagi o szkole):</b><br>
+			<textarea name="uwagi" rows="4" cols="50" placeholder="..."></textarea>
+		</p>
+
+		<!-- 8. Przyciski formularza -->
+		<p>
+			<b>8. Przyciski Formularza (Submit, Reset, Button):</b><br><br>
+			<input type="reset" value="Anuluj"> &nbsp;&nbsp;
+			<input type="submit" value="Wyślij Formularz"> &nbsp;&nbsp;
+			<button type="button" onclick="alert('Wysłano dane')">Wyślij Dane</button>
+		</p>
+
+	</form>
+
+</body>
+</html>
